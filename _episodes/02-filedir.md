@@ -60,9 +60,9 @@ which is Nelle's **home directory**:
 > ## Home Directory Variation
 >
 > The home directory path will look different on different operating systems.
-> On Linux it may look like `/home/nelle`,
-> and on Windows it will be similar to `C:\Documents and Settings\nelle` or
-> `C:\Users\nelle`.  
+> On Linux it may look like `/home/admin`,
+> and on Windows it will be similar to `C:\Documents and Settings\admin` or
+> `C:\Users\admin`.  
 > (Note that it may look slightly different for different versions of Windows.)
 > In future examples, we've used Mac output as the default - Linux and Windows
 > output may differ slightly, but should be generally similar.  
@@ -82,7 +82,7 @@ On Nelle's computer, the filesystem looks like this:
 At the top is the **root directory**
 that holds everything else.
 We refer to it using a slash character, `/`, on its own;
-this is the leading slash in `/Users/nelle`.
+this is the leading slash in `/Users/admin`.
 
 Inside that directory are several other directories:
 `bin` (which is where some built-in programs are stored),
@@ -91,7 +91,7 @@ Inside that directory are several other directories:
 `tmp` (for temporary files that don't need to be stored long-term),
 and so on.  
 
-We know that our current working directory `/Users/nelle` is stored inside `/Users`
+We know that our current working directory `/Users/admin` is stored inside `/Users`
 because `/Users` is the first part of its name.
 Similarly,
 we know that `/Users` is stored inside the root directory `/`
@@ -113,8 +113,8 @@ her colleagues the Mummy and Wolfman.
 
 The Mummy's files are stored in `/Users/imhotep`,
 Wolfman's in `/Users/larry`,
-and Nelle's in `/Users/nelle`.  Because Nelle is the user in our
-examples here, this is why we get `/Users/nelle` as our home directory.  
+and Nelle's in `/Users/admin`.  Because Nelle is the user in our
+examples here, this is why we get `/Users/admin` as our home directory.  
 Typically, when you open a new command prompt you will be in
 your home directory to start.  
 
@@ -467,9 +467,9 @@ $ cd data
 These commands will move us from our home directory onto our Desktop, then into
 the `data-shell` directory, then into the `data` directory.  `cd` doesn't print anything,
 but if we run `pwd` after it, we can see that we are now
-in `/Users/nelle/Desktop/data-shell/data`.
+in `/Users/admin/Desktop/data-shell/data`.
 If we run `ls` without arguments now,
-it lists the contents of `/Users/nelle/Desktop/data-shell/data`,
+it lists the contents of `/Users/admin/Desktop/data-shell/data`,
 because that's where we now are:
 
 ~~~
@@ -478,7 +478,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell/data
+/Users/admin/Desktop/data-shell/data
 ~~~
 {: .output}
 
@@ -526,7 +526,7 @@ $ cd ..
 or more succinctly,
 the **parent** of the current directory.
 Sure enough,
-if we run `pwd` after running `cd ..`, we're back in `/Users/nelle/Desktop/data-shell`:
+if we run `pwd` after running `cd ..`, we're back in `/Users/admin/Desktop/data-shell`:
 
 ~~~
 $ pwd
@@ -534,7 +534,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell
+/Users/admin/Desktop/data-shell
 ~~~
 {: .output}
 
@@ -554,7 +554,7 @@ $ ls -F -a
 
 `-a` stands for "show all";
 it forces `ls` to show us file and directory names that begin with `.`,
-such as `..` (which, if we're in `/Users/nelle`, refers to the `/Users` directory)
+such as `..` (which, if we're in `/Users/admin`, refers to the `/Users` directory)
 As you can see,
 it also displays another special directory that's just called `.`,
 which means "the current working directory".
@@ -581,8 +581,8 @@ equivalent to `ls -Fa`.
 > The special names `.` and `..` don't belong to `cd`;
 > they are interpreted the same way by every program.
 > For example,
-> if we are in `/Users/nelle/data`,
-> the command `ls ..` will give us a listing of `/Users/nelle`.
+> if we are in `/Users/admin/data`,
+> the command `ls ..` will give us a listing of `/Users/admin`.
 > When the meanings of the parts are the same no matter how they're combined,
 > programmers say they are **orthogonal**:
 > Orthogonal systems tend to be easier for people to learn
@@ -607,7 +607,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle
+/Users/admin
 ~~~
 {: .output}
 
@@ -651,12 +651,12 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell/data
+/Users/admin/Desktop/data-shell/data
 ~~~
 {: .output}
 
 ~~~
-$ cd /Users/nelle/Desktop/data-shell
+$ cd /Users/admin/Desktop/data-shell
 ~~~
 {: .language-bash}
 
@@ -666,9 +666,9 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 >
 > The shell interprets the character `~` (tilde) at the start of a path to
 > mean "the current user's home directory". For example, if Nelle's home
-> directory is `/Users/nelle`, then `~/data` is equivalent to
+> directory is `/Users/admin`, then `~/data` is equivalent to
 > `/Users/nelle/data`. This only works if it is the first character in the
-> path: `here/there/~/elsewhere` is *not* `here/there/Users/nelle/elsewhere`.
+> path: `here/there/~/elsewhere` is *not* `here/there/Users/admin/elsewhere`.
 >
 > Another shortcut is the `-` (dash) character.  `cd` will translate `-` into
 > *the previous directory I was in*, which is faster than having to remember,
